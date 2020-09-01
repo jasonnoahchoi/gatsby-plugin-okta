@@ -4,12 +4,12 @@
   </a>
 </p>
 <h1 align="center">
-  Starter for creating a Gatsby Theme workspace
+  Starter for Gatsby Okta Authentication
 </h1>
 
 ```shell
-gatsby new my-theme https://github.com/gatsbyjs/gatsby-starter-theme-workspace
-cd my-theme
+gatsby new gatsby-plugin-okta https://github.com/gatsbyjs/gatsby-starter-theme-workspace
+cd gatsby-plugin-okta
 yarn workspace example develop
 ```
 
@@ -18,7 +18,7 @@ yarn workspace example develop
 ```text
 .
 ├── README.md
-├── gatsby-theme-minimal
+├── gatsby-plugin-okta
 │   ├── README.md
 │   ├── gatsby-config.js
 │   ├── index.js
@@ -34,14 +34,14 @@ yarn workspace example develop
 3 directories, 10 files
 ```
 
-### `gatsby-theme-minimal`
+### `gatsby-plugin-okta`
 
 This directory is the theme package itself. You should rename this at
-some point to be `gatsby-theme-{my-theme-name}`. Also change the
+some point to be `gatsby-plugin-{gatsby-plugin-name}`. Also change the
 `package.json` name field and the corresponding dependency in the
 example directory's `package.json`/`gatsby-config.js` to match the chosen name.
 
-- `gatsby-theme-minimal/`
+- `gatsby-plugin-okta/`
   - `gatsby-config.js`: An empty gatsby-config that you can use as a starting point for building functionality into your theme.
   - `index.js`: Since themes also function as plugins, this is an empty file that
     gatsby needs to use this theme as a plugin.
