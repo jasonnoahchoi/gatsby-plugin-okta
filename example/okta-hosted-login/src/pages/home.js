@@ -38,7 +38,7 @@ export default function Home() {
   if (authState.isPending) {
     return <div>Loading...</div>
   }
-
+  console.log(userInfo)
   return (
     <>
       <Text as="h1">PKCE Flow w/ Okta Hosted Login Page</Text>
@@ -49,7 +49,7 @@ export default function Home() {
 
         {authState.isAuthenticated && userInfo && (
           <div>
-            <p>Welcome back, {userInfo.name}!</p>
+            <Text>Welcome back, {userInfo.name}!</Text>
             <p>
               You have successfully authenticated against your Okta org, and
               have been redirected back to this application. You now have an ID
