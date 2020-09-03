@@ -13,11 +13,12 @@
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
+    "@okta/okta-signin-widget": "^4.4.1",
     "emotion-theming": "^10.0.27",
     "gatsby": "^2.24.50",
     "gatsby-plugin-chakra-ui": "^0.1.4",
-    "gatsby-theme-shared-ui": "*",
     "gatsby-plugin-okta": "*",
+    "gatsby-theme-shared-ui": "*",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-hook-form": "^6.7.0"
