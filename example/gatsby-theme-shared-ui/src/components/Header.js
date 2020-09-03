@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from '@reach/router'
+import { NavLink } from 'gatsby-theme-shared-ui'
 import { useGatsbyAuth } from 'gatsby-plugin-okta'
-import { Button, Box } from '@chakra-ui/core'
+import { Button, Box, Text } from '@chakra-ui/core'
 
 const headerStyle = {
   display: 'flex',
@@ -9,11 +9,6 @@ const headerStyle = {
   borderBottom: '1px solid #e7e7e7',
   justifyContent: 'space-between',
   padding: 10,
-}
-
-const linkStyle = {
-  color: '#242424',
-  textDecoration: 'underline',
 }
 
 export default function Header() {
@@ -29,13 +24,12 @@ export default function Header() {
   return (
     <header>
       <Box style={headerStyle}>
-        <h3>
-          <Link style={linkStyle} to="/home">
-            HOME
-          </Link>
-        </h3>
-        <Link to="/">Landing</Link>
-        <Link to="/profile">Profile</Link>
+        <Text fontWeight="bold" paddingTop="10px">
+          Okta Hosted Login Widget
+        </Text>
+        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/landing">Landing</NavLink>
+        <NavLink to="/profile">Profile</NavLink>
         <Button onClick={authState.isAuthenticated ? logout : login}>
           {authState.isAuthenticated ? 'Logout' : 'Login'}
         </Button>
