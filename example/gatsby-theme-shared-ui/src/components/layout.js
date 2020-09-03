@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/core'
 
 import Header from './Header'
+import { ExternalLink } from './Link'
 
 const SiteInfo = styled.div({
   textAlign: 'center',
@@ -77,7 +78,8 @@ export default function Layout({ children }) {
         >
           <SiteInfo>
             &copy; {new Date().getFullYear()}, Built by Jason Noah Choi on
-            {` `} <a href="https://www.gatsbyjs.org">Gatsby</a>
+            {` `}{' '}
+            <ExternalLink href="https://www.gatsbyjs.org">Gatsby</ExternalLink>
           </SiteInfo>
         </Box>
       </ColorModeProvider>

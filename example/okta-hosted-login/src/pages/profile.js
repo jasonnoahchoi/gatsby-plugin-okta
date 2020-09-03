@@ -8,6 +8,7 @@ import {
   TableRow,
   TableHead,
   TableHeader,
+  ExternalLink,
 } from 'gatsby-theme-shared-ui'
 
 const Profile = () => {
@@ -44,9 +45,9 @@ const Profile = () => {
         <Text>
           Below is the information from your ID token which was obtained during
           the &nbsp;
-          <a href="https://developer.okta.com/docs/guides/implement-auth-code-pkce">
+          <ExternalLink href="https://developer.okta.com/docs/guides/implement-auth-code-pkce">
             PKCE Flow
-          </a>{' '}
+          </ExternalLink>{' '}
           and is now stored in local storage.
         </Text>
         <Text>

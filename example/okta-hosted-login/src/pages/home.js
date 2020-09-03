@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useGatsbyAuth } from 'gatsby-plugin-okta'
 import { Button, Box, Text } from '@chakra-ui/core'
+import { Link, ExternalLink } from 'gatsby-theme-shared-ui'
 
 export default function Home() {
   const { authState, authService } = useGatsbyAuth()
@@ -48,16 +49,13 @@ export default function Home() {
 
         {authState.isAuthenticated && userInfo && (
           <div>
-            <p>
-              Welcome back,
-              {userInfo.name}!
-            </p>
+            <p>Welcome back, {userInfo.name}!</p>
             <p>
               You have successfully authenticated against your Okta org, and
               have been redirected back to this application. You now have an ID
               token and access token in local storage. Visit the{' '}
-              <a href="/profile">My Profile</a> page to take a look inside the
-              ID token.
+              <Link to="/profile">My Profile</Link> page to take a look inside
+              the ID token.
             </p>
             <h3>Next Steps</h3>
             <p>
@@ -73,16 +71,12 @@ export default function Home() {
             <ul>
               {resourceServerExamples.map((example) => (
                 <li key={example.url}>
-                  <a href={example.url}>{example.label}</a>
+                  <ExternalLink href={example.url}>
+                    {example.label}
+                  </ExternalLink>
                 </li>
               ))}
             </ul>
-            <p>
-              Once you have downloaded and started the example resource server,
-              you can visit the
-              <a href="/messages">My Messages</a> page to see the authentication
-              process in action.
-            </p>
           </div>
         )}
 
@@ -94,13 +88,13 @@ export default function Home() {
             </p>
             <p>
               <span>This example shows you how to use the </span>
-              <a href="https://github.com/okta/okta-oidc-js/tree/master/packages/okta-react">
+              <ExternalLink href="https://github.com/okta/okta-oidc-js/tree/master/packages/okta-react">
                 Okta React Library
-              </a>
+              </ExternalLink>
               <span> to add the </span>
-              <a href="https://developer.okta.com/docs/guides/implement-auth-code-pkce">
+              <ExternalLink href="https://developer.okta.com/docs/guides/implement-auth-code-pkce">
                 PKCE Flow
-              </a>
+              </ExternalLink>
               <span> to your application.</span>
             </p>
             <p>
