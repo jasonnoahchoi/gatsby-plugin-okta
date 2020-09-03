@@ -10,8 +10,8 @@
     "url": "https://github.com/jasonnoahchoi/gatsby-plugin-okta"
   },
   "scripts": {
-    "build": "yarn workspace example build",
-    "develop": "yarn workspace example develop"
+    "build": "yarn workspace example okta-hosted-login build",
+    "develop": "yarn workspace example okta-hosted-login develop"
   },
   "workspaces": [
     "gatsby-plugin-okta",

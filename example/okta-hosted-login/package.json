@@ -1,0 +1,25 @@
+{
+  "name": "okta-hosted-login",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "jasonnoahchoi <jasonnoahchoi@gmail.com> (@jasonnoahchoi)",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby clean && gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
+    "gatsby": "^2.24.50",
+    "gatsby-plugin-chakra-ui": "^0.1.4",
+    "gatsby-theme-shared-ui": "*",
+    "gatsby-plugin-okta": "*",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-hook-form": "^6.7.0"
+  }
+}
