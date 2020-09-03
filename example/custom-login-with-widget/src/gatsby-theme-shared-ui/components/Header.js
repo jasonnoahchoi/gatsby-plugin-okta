@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGatsbyAuth } from 'gatsby-plugin-okta'
+import { useOktaAuth } from 'gatsby-plugin-okta'
 import { Button, Box, Text } from '@chakra-ui/core'
 import { NavLink } from 'gatsby-theme-shared-ui'
 import { navigate } from 'gatsby'
@@ -14,7 +14,7 @@ const headerStyle = {
 }
 
 export default function Header() {
-  const { authState, authService } = useGatsbyAuth()
+  const { authState, authService } = useOktaAuth()
 
   const login = async () => {
     navigate('/login')

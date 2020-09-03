@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { navigate } from 'gatsby'
-import { useGatsbyAuth } from 'gatsby-plugin-okta'
+import { useOktaAuth } from 'gatsby-plugin-okta'
 import { Button, Box, Text } from '@chakra-ui/core'
 import { Link, ExternalLink } from 'gatsby-theme-shared-ui'
 
 export default function Home() {
-  const { authState, authService } = useGatsbyAuth()
+  const { authState, authService } = useOktaAuth()
   const [userInfo, setUserInfo] = useState(null)
 
   useEffect(() => {
