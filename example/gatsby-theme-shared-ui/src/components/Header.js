@@ -34,8 +34,8 @@ export default function Header() {
             HOME
           </Link>
         </h3>
-        <Link to="landing">Landing</Link>
-        <Link to="profile">Profile</Link>
+        <Link to="/">Landing</Link>
+        <Link to="/profile">Profile</Link>
         <Button onClick={authState.isAuthenticated ? logout : login}>
           {authState.isAuthenticated ? 'Logout' : 'Login'}
         </Button>
