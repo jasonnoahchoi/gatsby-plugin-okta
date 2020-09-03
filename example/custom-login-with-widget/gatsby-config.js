@@ -16,8 +16,8 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: 'Okta Hosted Login',
+    title: 'Custom Login with Widget',
     source:
-      'https://github.com/jasonnoahchoi/gatsby-plugin-okta/tree/master/example/okta-hosted-login',
+      'https://github.com/jasonnoahchoi/gatsby-plugin-okta/tree/master/example/custom-login-with-widget',
   },
 }
