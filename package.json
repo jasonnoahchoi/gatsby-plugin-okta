@@ -15,7 +15,7 @@
   },
   "workspaces": [
     "gatsby-plugin-okta",
-    "example"
+    "example/*"
   ],
   "devDependencies": {
     "prettier": "^2.1.1"
