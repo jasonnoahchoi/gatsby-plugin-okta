@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { useGatsbyAuth } from 'gatsby-plugin-okta'
 import { Icon, Text, Box } from '@chakra-ui/core'
+import { useGatsbyAuth } from 'gatsby-plugin-okta'
 import {
   Table,
   TableBody,

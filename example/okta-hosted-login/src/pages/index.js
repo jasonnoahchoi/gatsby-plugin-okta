@@ -1,11 +1,10 @@
 import React from 'react'
 import { Router } from '@reach/router'
-
+import { PrivateRoute } from 'gatsby-theme-shared-ui'
 import NotFoundPage from './404'
 import Landing from './landing'
 import Home from './home'
 import Profile from './profile'
-import { PrivateRoute } from 'gatsby-theme-shared-ui'
 
 export default function App() {
   return (
