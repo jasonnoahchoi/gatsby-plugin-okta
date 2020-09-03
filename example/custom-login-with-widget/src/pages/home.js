@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { navigate } from 'gatsby'
 import { useGatsbyAuth } from 'gatsby-plugin-okta'
 import { Button, Box, Text } from '@chakra-ui/core'
 import { Link, ExternalLink } from 'gatsby-theme-shared-ui'
@@ -32,7 +33,7 @@ export default function Home() {
   ]
 
   const login = async () => {
-    authService.login('/')
+    navigate('/login')
   }
 
   if (authState.isPending) {
@@ -98,11 +99,11 @@ export default function Home() {
               <span> to your application.</span>
             </p>
             <p>
-              When you click the login button below, you will be redirected to
-              the login page on your Okta org. After you authenticate, you will
-              be returned to this application with an ID token and access token.
-              These tokens will be stored in local storage and can be retrieved
-              at a later time.
+              When you click the `login` button below, you will be redirected to
+              the login page at your <Text as="mark">/login</Text> route. After
+              you authenticate, you will be returned to this application with an
+              ID token and access token. These tokens will be stored in local
+              storage and can be retrieved at a later time.
             </p>
             <Button id="login-button" primary onClick={login}>
               Login
