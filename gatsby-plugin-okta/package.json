@@ -5,6 +5,14 @@
   "author": "jasonnoahchoi <jasonnoahchoi@gmail.com> (@jasonnoahchoi)",
   "license": "MIT",
   "peerDependencies": {
-    "gatsby": "^2.6.0"
+    "gatsby": "^2.6.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "dependencies": {
+    "@okta/okta-react": "^3.0.6"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {
+    "react-router-dom": "^5.2.0"
   }
 }
