@@ -1,13 +1,16 @@
 import React from 'react'
-import { Box, useColorMode } from '@chakra-ui/core'
 import styled from '@emotion/styled'
 import {
   ThemeProvider,
   CSSReset,
   ColorModeProvider,
   theme,
+  Box,
+  useColorMode,
 } from '@chakra-ui/core'
 import { ExternalLink } from 'gatsby-theme-shared-ui'
+import { SecurityProvider, config } from 'gatsby-plugin-okta'
+import { navigate } from 'gatsby'
 
 import Header from './Header'
 
@@ -48,41 +51,50 @@ const customTheme = {
   },
 }
 
+const customAuthHandler = () => {
+  // Redirect to the /login page that has a CustomLoginComponent
+  navigate('/login')
+}
+
 export default function Layout({ children }) {
   const { colorMode } = useColorMode()
   const bgColor = { light: 'white', dark: 'gray.800' }
   const color = { light: 'gray.800', dark: 'white' }
   return (
-    <ThemeProvider theme={customTheme}>
-      <CSSReset />
-      <ColorModeProvider>
-        <Header />
-        <Box
-          minH="90%"
-          margin="1em"
-          bg={bgColor[colorMode]}
-          color={color[colorMode]}
-        >
-          {children}
-        </Box>
-        <Box
-          as="footer"
-          bg={bgColor[colorMode]}
-          color={color[colorMode]}
-          borderTop="1px solid black"
-          position="fixed"
-          bottom={0}
-          left={0}
-          right={0}
-          height={60}
-        >
-          <SiteInfo>
-            &copy; {new Date().getFullYear()}, Built by Jason Noah Choi on
-            {` `}{' '}
-            <ExternalLink href="https://www.gatsbyjs.org">Gatsby</ExternalLink>
-          </SiteInfo>
-        </Box>
-      </ColorModeProvider>
-    </ThemeProvider>
+    <SecurityProvider {...config} oAuthRequired={customAuthHandler}>
+      <ThemeProvider theme={customTheme}>
+        <CSSReset />
+        <ColorModeProvider>
+          <Header />
+          <Box
+            minH="90%"
+            margin="1em"
+            bg={bgColor[colorMode]}
+            color={color[colorMode]}
+          >
+            {children}
+          </Box>
+          <Box
+            as="footer"
+            bg={bgColor[colorMode]}
+            color={color[colorMode]}
+            borderTop="1px solid black"
+            position="fixed"
+            bottom={0}
+            left={0}
+            right={0}
+            height={60}
+          >
+            <SiteInfo>
+              &copy; {new Date().getFullYear()}, Built by Jason Noah Choi on
+              {` `}{' '}
+              <ExternalLink href="https://www.gatsbyjs.org">
+                Gatsby
+              </ExternalLink>
+            </SiteInfo>
+          </Box>
+        </ColorModeProvider>
+      </ThemeProvider>
+    </SecurityProvider>
   )
 }
