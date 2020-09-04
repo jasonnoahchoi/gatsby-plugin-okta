@@ -38,7 +38,6 @@ export default function Home() {
   if (authState.isPending) {
     return <div>Loading...</div>
   }
-  console.log(userInfo)
   return (
     <>
       <Text as="h1">PKCE Flow w/ Okta Hosted Login Page</Text>

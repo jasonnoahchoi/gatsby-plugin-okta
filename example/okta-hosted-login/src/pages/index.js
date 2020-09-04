@@ -9,9 +9,9 @@ import Profile from './profile'
 export default function App() {
   return (
     <Router>
-      <Landing path="/" title="Landing" />
-      <PrivateRoute as={Home} path="home" title="Home" />
-      <PrivateRoute as={Profile} path="profile" title="Profile" />
+      <PrivateRoute as={Landing} path="/" />
+      <Profile path="/profile" />
+      <Home path="/home" />
       <NotFoundPage default title="Not Found" />
     </Router>
   )

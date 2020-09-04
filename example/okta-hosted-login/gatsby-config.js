@@ -6,6 +6,21 @@ module.exports = {
   plugins: [
     'gatsby-theme-shared-ui',
     {
+      resolve: 'gatsby-plugin-chakra-ui',
+      options: {
+        /**
+         * @property {boolean} [isResettingCSS=true]
+         * if false, this plugin will not use `<CSSReset />
+         */
+        isResettingCSS: true,
+        /**
+         * @property {boolean} [isUsingColorMode=true]
+         * if false, this plugin will not use <ColorModeProvider />
+         */
+        isUsingColorMode: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-okta',
       options: {
         domain: process.env.OKTA_DOMAIN,
