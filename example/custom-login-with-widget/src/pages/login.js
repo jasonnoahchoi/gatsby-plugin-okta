@@ -2,11 +2,15 @@ import React, { useState, useEffect } from 'react'
 import { OktaSignInWidget, config } from 'gatsby-plugin-okta'
 import { Box } from '@chakra-ui/core'
 
+const logo = 'https://www.gatsbyjs.com/Gatsby-Monogram.svg'
+const widget = OktaSignInWidget({
+  config,
+  logo,
+  title: 'Custom Login with Widget',
+})
+
 export default function Login() {
   const [renderWidget, setRenderWidget] = useState(false)
-
-  const logo = 'https://www.gatsbyjs.com/Gatsby-Monogram.svg'
-  const widget = OktaSignInWidget({ config, logo })
   useEffect(() => {
     if (!renderWidget) {
       widget.renderEl(

@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <>
-      <Text as="h1">PKCE Flow w/ Okta Hosted Login Page</Text>
+      <Text as="h1">Okta Login Widget</Text>
       <Box>
         {authState.isAuthenticated && !userInfo && (
           <div>Loading user information...</div>

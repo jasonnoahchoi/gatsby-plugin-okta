@@ -12,8 +12,8 @@ export default function App() {
     <Router>
       <Landing path="/" title="Landing" />
       <Login path="login" title="Login" />
-      <PrivateRoute as={Home} path="home" title="Home" />
-      <PrivateRoute as={Profile} path="profile" title="Profile" />
+      <Home path="home" title="Home" />
+      <Profile path="profile" title="Profile" />
       <NotFoundPage default title="Not Found" />
     </Router>
   )

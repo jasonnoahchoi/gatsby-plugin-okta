@@ -52,7 +52,7 @@ const customTheme = {
 }
 
 const customAuthHandler = () => {
-  // Redirect to the /login page that has a CustomLoginComponent
+  // Redirect to the /login page that has a Login Component
   navigate('/login')
 }
 
