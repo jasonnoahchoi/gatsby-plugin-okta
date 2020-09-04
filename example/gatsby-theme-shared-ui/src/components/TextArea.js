@@ -1,6 +1,18 @@
 import React from 'react'
 import { Box, Text, Textarea } from '@chakra-ui/core'
 
+/**
+ * TextArea component
+ *
+ * Provides a text block component
+ *
+ * @param {string} name - top level header of component
+ * @param {string || number} padding - padding we want to add to the outer div
+ * @param {ReactElement} children - Optional React children
+ *
+ * @returns <React.Fragment>
+ */
+
 export default function TextArea({ name, padding, children }) {
   return (
     <>

@@ -8,6 +8,8 @@ import {
   Button,
 } from '@chakra-ui/core'
 
+// Not being used at the moment
+
 export default function Form(authService) {
   const { handleSubmit, errors, register, formState } = useForm()
   const [sessionToken, setSessionToken] = useState()

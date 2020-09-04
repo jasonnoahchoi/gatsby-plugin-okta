@@ -48,6 +48,17 @@ const customTheme = {
   },
 }
 
+/**
+ * Layout component
+ *
+ * Wrapper that allows chakra-ui can have access to the theme.
+ * Every page that uses Layout will have access to the `<Header />` component.
+ *
+ * @param {ReactElement} [children]
+ *
+ * @returns functional React component
+ */
+
 export default function Layout({ children }) {
   const { colorMode } = useColorMode()
   const bgColor = { light: 'white', dark: 'gray.800' }
