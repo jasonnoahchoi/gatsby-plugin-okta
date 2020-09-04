@@ -1,25 +1,37 @@
-<h1 align="center">gatsby-plugin-okta</h1>
-
 <p align="center">
-  <strong>A Gatsby theme for adding Okta to your application.</strong>
-</p>
+  <a href="https://www.gatsbyjs.com">
+    <img alt="Gatsby" align="center" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" height="60" />
+  </a>
+  <img alt="ei-heart" align="center" src="https://raw.githubusercontent.com/evil-icons/evil-icons/master/assets/icons/ei-unlock.svg" height="80" />
+  <a href="https://www.okta.com">
+    <img alt="Okta" align="center" src="https://www.okta.com/themes/custom/okta_www_theme/images/logo.svg" height="60" />
+  </a>
+<p>
+
+# gatsby-plugin-okta
+
+A starter for Gatsby Okta authentication plugin for easy access to Okta authentication in your Gatsby app.
+
+The plugin generates a config for you based on your `.env` variables. Just plug it into
+ `gatsby-config.js` and it will instantiate an `OktaAuth` for you. 
 
 ## Table of Contents
-- [Table of Contents](#table-of-contents)
-- [Quick Start](#quick-start)
-- [How to Use](#how-to-use)
-  - [Setup](#setup)
-- [Details](#details)
-- [Implementation](#implementation)
-  - [Context.Provider + useOktaAuth hook combo](#contextprovider--useoktaauth-hook-combo)
-  - [Understanding SecurityProvider](#understanding-securityprovider)
-  - [useGatsbyAuth hook only](#usegatsbyauth-hook-only)
-  - [useOktaAuth and useGatsbyAuth Deep Dive](#useoktaauth-and-usegatsbyauth-deep-dive)
-  - [`authState`](#authstate)
-  - [`authService`](#authservice)
-  - [Setup Okta Widget](#setup-okta-widget)
-  - [`Okta Signin Widget` props](#okta-signin-widget-props)
-- [Issues](#issues)
+- [gatsby-plugin-okta](#gatsby-plugin-okta)
+  - [Table of Contents](#table-of-contents)
+  - [Quick Start](#quick-start)
+  - [How to Use](#how-to-use)
+    - [Setup](#setup)
+  - [Details](#details)
+  - [Implementation](#implementation)
+    - [Context.Provider + useOktaAuth hook combo](#contextprovider--useoktaauth-hook-combo)
+    - [Understanding SecurityProvider](#understanding-securityprovider)
+    - [useGatsbyAuth hook only](#usegatsbyauth-hook-only)
+    - [useOktaAuth and useGatsbyAuth Deep Dive](#useoktaauth-and-usegatsbyauth-deep-dive)
+    - [`authState`](#authstate)
+    - [`authService`](#authservice)
+    - [Setup Okta Widget](#setup-okta-widget)
+    - [`Okta Signin Widget` props](#okta-signin-widget-props)
+  - [Issues](#issues)
 
 ## Quick Start
 
