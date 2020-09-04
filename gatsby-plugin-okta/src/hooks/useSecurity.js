@@ -1,8 +1,7 @@
 /**
  * useSecurity is basically a copy of <Security /> from @okta/okta-react
  * except instead of being the provider that wraps around all components,
- * instead it provides access to the context as a hook
- *
+ * instead it provides access to the context as a hook.
  */
 
 import { useState, useEffect, useMemo, createContext, useContext } from 'react'

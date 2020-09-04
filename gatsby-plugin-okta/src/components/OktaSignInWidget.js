@@ -1,7 +1,21 @@
 import OktaSignIn from '@okta/okta-signin-widget'
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css'
 
-export default function OktaSignInWidget({ config, logo }) {
+/**
+ * OktaSignIn component
+ *
+ * The okta sign in widget requires that you are not using SSR at this time.
+ * This is something that will be handled in a future PR hopefully.
+ * It also requires that you set a config.
+ *
+ * @param {object} config - Required configuration object that can be found at `src/auth/config`
+ * @param {string} title - Optional string that provides title for widget
+ * @param {string} logo - Optional logo path
+ *
+ * @returns {object} widget
+ */
+
+export default function OktaSignInWidget({ config, title, logo }) {
   const { pkce, issuer, clientId, redirectUri, scopes, domain } = config
   const widget = new OktaSignIn({
     /**
@@ -15,7 +29,7 @@ export default function OktaSignInWidget({ config, logo }) {
     logo,
     i18n: {
       en: {
-        'primaryauth.title': 'Sign in with Custom Widget',
+        'primaryauth.title': title,
       },
     },
     authParams: {

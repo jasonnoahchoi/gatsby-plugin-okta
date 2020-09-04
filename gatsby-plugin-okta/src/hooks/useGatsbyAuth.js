@@ -5,8 +5,7 @@ import config from '../auth/config'
  * useGatsbyAuth does not require the use of `<SecurityProvider {...config} />`
  * because useSecurity already has already created and using the context.
  *
- *
- * returns {
+ * @returns {Object} containing {
  *  authState,
  *  authService,
  *  loading,
@@ -17,5 +16,6 @@ import config from '../auth/config'
 export default function useGatsbyAuth() {
   const { loading, error, result } = useSecurity(config)
   const { authState, authService } = result
+
   return { loading, error, authState, authService }
 }
