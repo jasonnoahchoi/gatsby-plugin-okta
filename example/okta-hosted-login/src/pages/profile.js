@@ -72,18 +72,18 @@ const Profile = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {Object.entries(userInfo).map((claimEntry, i) => {
-            const claimName = claimEntry[0]
-            const claimValue = claimEntry[1]
-            const claimId = `claim-${claimName}`
+          {Object.entries(userInfo).map((entry, i) => {
+            const key = entry[0]
+            const value = entry[1]
+            const claimId = `claim-${key}`
             return (
-              <TableRow key={claimName} bg={i % 2 === 0 ? 'white' : 'gray.700'}>
+              <TableRow key={key} bg={i % 2 === 0 ? 'white' : 'gray.700'}>
                 <TableCell>
                   <Text
                     fontSize="sm"
                     color={i % 2 === 0 ? 'gray.700' : 'white'}
                   >
-                    {claimName}
+                    {key}
                   </Text>
                 </TableCell>
                 <TableCell id={claimId}>
@@ -91,7 +91,7 @@ const Profile = () => {
                     fontSize="sm"
                     color={i % 2 === 0 ? 'gray.700' : 'white'}
                   >
-                    {claimValue}
+                    {value}
                   </Text>
                 </TableCell>
               </TableRow>

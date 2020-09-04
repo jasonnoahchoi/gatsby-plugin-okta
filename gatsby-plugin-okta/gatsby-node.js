@@ -11,6 +11,7 @@ const checkRequiredCreds = (creds) => {
 exports.onCreateWebpackConfig = ({ plugins, actions }, options) => {
   const {
     clientId,
+    domain,
     issuer,
     redirectUri,
     scopes,
@@ -23,6 +24,7 @@ exports.onCreateWebpackConfig = ({ plugins, actions }, options) => {
     plugins: [
       plugins.define({
         'process.env': {
+          OKTA_DOMAIN: JSON.stringify(domain),
           OKTA_ISSUER: JSON.stringify(issuer),
           OKTA_CLIENT_ID: JSON.stringify(clientId),
           OKTA_REDIRECT_URI: JSON.stringify(redirectUri),

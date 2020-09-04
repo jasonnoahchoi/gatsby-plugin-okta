@@ -8,15 +8,12 @@ const config = {
   pkce: process.env.OKTA_PKCE || true,
   disableHttpsCheck: process.env.OKTA_DISABLE_HTTPS_CHECK || false,
   authParams: {
+    // for okta-sign-in-widget
     display: 'page',
-    pkce: true,
-    responseMode: 'query',
-    responseType: ['token', 'id_token'],
+    responseType: process.env.OKTA_RESPONSE_TYPE || ['token', 'id_token'],
+    pkce: process.env.OKTA_PKCE || true,
+    responseMode: process.env.OKTA_PKCE || true ? 'query' : 'fragment',
   },
-  // tokenManager: {
-  //   storage: 'sessionStorage',
-  //   expireEarlySeconds: 120,
-  // },
 }
 
 export default config
