@@ -1,4 +1,11 @@
-<p align="center">
+# gatsby-plugin-okta
+
+A starter for Gatsby Okta authentication plugin for easy access to Okta authentication in your Gatsby app.
+
+The plugin generates a config for you based on your `.env` variables. Just plug it into
+ `gatsby-config.js` and it will instantiate an `OktaAuth` for you. 
+
+ <p align="center">
   <a href="https://www.gatsbyjs.com">
     <img alt="Gatsby" align="center" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" height="60" />
   </a>
@@ -7,13 +14,6 @@
     <img alt="Okta" align="center" src="https://www.okta.com/themes/custom/okta_www_theme/images/logo.svg" height="60" />
   </a>
 <p>
-
-# gatsby-plugin-okta
-
-A starter for Gatsby Okta authentication plugin for easy access to Okta authentication in your Gatsby app.
-
-The plugin generates a config for you based on your `.env` variables. Just plug it into
- `gatsby-config.js` and it will instantiate an `OktaAuth` for you. 
 
 ## Table of Contents
 - [gatsby-plugin-okta](#gatsby-plugin-okta)
