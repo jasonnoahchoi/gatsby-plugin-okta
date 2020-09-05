@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link as ChakraLink, Box, Button } from '@chakra-ui/core'
-import { Link as GatsbyLink, navigate } from 'gatsby'
+import { Link as ChakraLink, Box } from '@chakra-ui/core'
+import { Link as GatsbyLink } from 'gatsby'
 
 /**
  * Link component

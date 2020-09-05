@@ -54,7 +54,7 @@ const customTheme = {
  * Wrapper that allows chakra-ui can have access to the theme.
  * Every page that uses Layout will have access to the `<Header />` component.
  *
- * @param {ReactElement} [children]
+ * @param {ReactElement} [children] - Optional React children
  *
  * @returns functional React component
  */

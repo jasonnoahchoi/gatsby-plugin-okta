@@ -51,9 +51,9 @@ const Profile = () => {
           and is now stored in local storage.
         </Text>
         <Text>
-          This route is protected with the
-          <code>&lt;PrivateRoute&gt;</code> component, which will ensure that
-          this page cannot be accessed until you have authenticated.
+          This route is protected with the <code>&lt;PrivateRoute&gt;</code>{' '}
+          component, which will ensure that this page cannot be accessed until
+          you have authenticated.
         </Text>
       </Box>
       <Table>
