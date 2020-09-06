@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-okta",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "author": "jasonnoahchoi <jasonnoahchoi@gmail.com> (@jasonnoahchoi)",
   "license": "MIT",
