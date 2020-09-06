@@ -15,8 +15,13 @@ The plugin generates a config for you based on your `.env` variables. Just plug 
   </a>
 <p>
 
+
+## How it works
+![](https://i.imgur.com/ds7tJ3A.gif)
+
 ## Table of Contents
 - [gatsby-plugin-okta](#gatsby-plugin-okta)
+  - [How it works](#how-it-works)
   - [Table of Contents](#table-of-contents)
   - [Problem](#problem)
   - [Solution](#solution)
@@ -77,10 +82,10 @@ $ gatsby new gatsby-plugin-okta https://github.com/jasonnoahchoi/gatsby-plugin-o
 $ cd gatsby-plugin-okta
 
 // to run the okta-hosted-login example
-$ yarn workspace example okta-hosted-login develop
+$ yarn workspace okta-hosted-login develop
 
 // to run the custom-login-with-widget example
-$ yarn workspace example custom-login-with-widget develop
+$ yarn workspace custom-login-with-widget develop
 ```
 
 ## Project Layout

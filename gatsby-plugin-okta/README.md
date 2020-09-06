@@ -15,10 +15,18 @@ The plugin generates a config for you based on your `.env` variables. Just plug 
   </a>
 <p>
 
+## How it works
+![](https://i.imgur.com/ds7tJ3A.gif)
+
 ## Table of Contents
 - [gatsby-plugin-okta](#gatsby-plugin-okta)
+  - [How it works](#how-it-works)
   - [Table of Contents](#table-of-contents)
   - [Quick Start](#quick-start)
+  - [Install](#install)
+    - [NPM](#npm)
+    - [Yarn](#yarn)
+    - [Start a new Gatsby Project](#start-a-new-gatsby-project)
   - [How to Use](#how-to-use)
     - [Setup](#setup)
   - [Details](#details)
@@ -42,6 +50,29 @@ yarn init
 # install gatsby-plugin-okta and it's dependencies
 yarn add gatsby react react-dom gatsby-plugin-okta
 ```
+
+## Install
+
+### NPM
+
+```sh
+$ npm install --save gatsby-plugin-okta
+```
+
+### Yarn
+```sh
+$ yarn add gatsby-plugin-okta
+```
+
+### Start a new Gatsby Project
+
+In your preferred directory...
+
+```sh
+$ gatsby new gatsby-plugin-okta https://github.com/jasonnoahchoi/gatsby-plugin-okta
+$ cd gatsby-plugin-okta
+```
+
 
 Then add the plugin to your `gatsby-config.js`.
 
@@ -71,6 +102,20 @@ module.exports = {
       },
     },
   ],
+```
+
+These values are required:
+  - `OKTA_ISSUER`, `OKTA_CLIENT_ID`, `OKTA_REDIRECT_URI`
+  
+These are optional and have the following defaults:
+```js
+// NOTE: `scopes`, `responseType` are of type [String] and not String. This was a huge hiccup for me.
+{ 
+  scopes: process.env.OKTA_SCOPES || ['openid', 'email', 'profile'],
+  responseType: process.env.OKTA_RESPONSE_TYPE || ['token', 'id_token'],
+  pkce: process.env.OKTA_PKCE || true,
+  disableHttpsCheck: process.env.OKTA_DISABLE_HTTPS_CHECK || false
+}
 ```
 
 ## Details

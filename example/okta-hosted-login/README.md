@@ -1,10 +1,6 @@
 # Gatsby Theme Okta Example
 
-A usage of
-[gatsby-plugin-okta](https://github.com/jasonnoahchoi/gatsby-plugin-okta)
-that does nothing but use the theme. As a result you will see `Error: Missing resources for /` when navigating to `http://localhost:8000`. To get
-rid of that, create a page in `src/pages/index.js`.
-
+An example showing the use of PKCE authentication with an Okta hosted login redirect.
 
 ## Getting Started
 
@@ -18,9 +14,45 @@ Fill in your information from the Okta admin dashboard. Steps can be found here:
 
 Instead of `http://localhost:8080` as written in the directions, use `http://localhost:8000` since this is what gatsby typically runs on. Same goes for the `http://localhost:xxxx/implicit/callback`.
 
-## Goals
+These values are required:
+  - `OKTA_ISSUER`, `OKTA_CLIENT_ID`, `OKTA_REDIRECT_URI`
+These are optional and have the following defaults:
+```js
+// NOTE: `scopes`, `responseType` are of type [String] and not String. This was a huge hiccup for me.
+{ 
+  scopes: process.env.OKTA_SCOPES || ['openid', 'email', 'profile'],
+  responseType: process.env.OKTA_RESPONSE_TYPE || ['token', 'id_token'],
+  pkce: process.env.OKTA_PKCE || true,
+  disableHttpsCheck: process.env.OKTA_DISABLE_HTTPS_CHECK || false
+}
+```
 
-Surprisingly, there are not many tutorials out there that show you how to setup Okta + Gatsby. I hope that this is a decent starting point to help jump start this movement. Okta is used frequently for in-house employees, but I foresee a huge uptick in consumer app users that will be using Okta login as awareness picks up more.
+```js
+// in your project's gatsby-config
+module.exports = {
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-okta',
+      options: {
+        domain: process.env.OKTA_DOMAIN,
+        issuer: process.env.OKTA_ISSUER,
+        clientId: process.env.OKTA_CLIENT_ID,
+        redirectUri: process.env.OKTA_REDIRECT_URI,
+        pkce: process.env.OKTA_PKCE,
+      },
+    },
+  ],
+```
+
+
+## How to Run
+
+Once the above has all been filled in:
+
+```sh
+// from the root of the project
+$ yarn workspace okta-hosted-login develop
+```
 
 ## Project Layout
 ```text

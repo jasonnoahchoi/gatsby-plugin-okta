@@ -1,10 +1,6 @@
 # Gatsby + Okta Custom Login with Widget
 
-A usage of
-[gatsby-plugin-okta](https://github.com/jasonnoahchoi/gatsby-plugin-okta)
-that does nothing but use the theme. As a result you will see `Error: Missing resources for /` when navigating to `http://localhost:8000`. To get
-rid of that, create a page in `src/pages/index.js`.
-
+An example showing the use of a lazy custom login widget.
 
 ## Getting Started
 
@@ -55,6 +51,14 @@ module.exports = {
       },
     },
   ],
+```
+
+## How to Run
+Once all of your env vars are plugged in:
+
+```sh
+// from the root folder
+$ yarn workspace custom-login-widget develop
 ```
 
 ## Project Layout
