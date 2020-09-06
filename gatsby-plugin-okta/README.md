@@ -16,7 +16,7 @@ The plugin generates a config for you based on your `.env` variables. Just plug 
 <p>
 
 ## How it works
-![](https://i.imgur.com/ds7tJ3A.gif)
+![](https://i.imgur.com/fdgzmKM.gif)
 
 ## Table of Contents
 - [gatsby-plugin-okta](#gatsby-plugin-okta)
@@ -356,8 +356,8 @@ export default function Login() {
 | `logo`   | `string` | URL or local path to an svg that allows rendering of a logo                                                                            |
 
 ## Issues
-This project is WIP and is just quickly put together so we can see an example of @reach/router usage.
-There are lots of areas we have yet to touch with this particular project and it can be vastly larger
+This project is WIP and is just quickly put together so we can see an example of `@reach/router` usage.
+There are bound to be issues and lots of areas we have yet to touch with this particular project. It can be vastly larger
 with much more customization that can be configured.
 
 This is an open source plugin, so all PRs are welcome! Please feel free to fork it over and submit them
