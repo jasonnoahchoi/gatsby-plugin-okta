@@ -16,7 +16,9 @@ The plugin generates a config for you based on your `.env` variables. Just plug 
 <p>
 
 ## How it works
-![](https://i.imgur.com/Dw6TCkF.gif)
+| [Custom Login Widget](example/custom-login-with-widget/) | [Okta Hosted Login](example/okta-hosted-login/) |
+| -------------------------------------------------------- | ----------------------------------------------- |
+| ![](https://i.imgur.com/Uvge6lS.gif)                     | ![](https://i.imgur.com/o7y3YCb.gif)            |
 
 ## Table of Contents
 - [gatsby-plugin-okta](#gatsby-plugin-okta)
