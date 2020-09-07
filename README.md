@@ -17,7 +17,7 @@ The plugin generates a config for you based on your `.env` variables. Just plug 
 
 
 ## How it works
-![](https://i.imgur.com/fdgzmKM.gif)
+![](https://i.imgur.com/Dw6TCkF.gif)
 
 ## Table of Contents
 - [gatsby-plugin-okta](#gatsby-plugin-okta)
@@ -30,6 +30,7 @@ The plugin generates a config for you based on your `.env` variables. Just plug 
     - [Yarn](#yarn)
     - [Start a new Gatsby Project](#start-a-new-gatsby-project)
   - [Project Layout](#project-layout)
+  - [example directory layout](#example-directory-layout)
   - [Dependencies](#dependencies)
     - [Optional dependencies](#optional-dependencies)
   - [How to Use](#how-to-use)
@@ -93,6 +94,8 @@ $ yarn workspace custom-login-with-widget develop
 ```md
 .
 ├── README.md
+├── package.json
+└── yarn.lock
 ├── gatsby-plugin-okta
 │   ├── src
 │       ├── auth
@@ -111,14 +114,16 @@ $ yarn workspace custom-login-with-widget develop
 │   ├── index.js
 │   └── package.json
 ├── example
-|   ├── [custom-login-with-widget](example/custom-login-with-widget/README.md#project-layout)
-|   ├── [gatsby-theme-shared-ui](example/gatsby-theme-shared-ui/README.md#project-layout)
-|   ├── [okta-hosted-login](example/okta-hosted-login/README.md#project-layout)
-├── package.json
-└── yarn.lock
+│   ├── see below
 
 10 directories, lots of files
 ```
+example directory layout
+--
+- [custom-login-with-widget](example/custom-login-with-widget/README.md#project-layout)
+- [gatsby-theme-shared-ui](example/gatsby-theme-shared-ui/README.md#project-layout)
+- [okta-hosted-login](example/okta-hosted-login/README.md#project-layout)
+
 
 ## Dependencies
 `@okta/okta-react`

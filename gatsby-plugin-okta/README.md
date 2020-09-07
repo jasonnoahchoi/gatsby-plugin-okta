@@ -16,7 +16,7 @@ The plugin generates a config for you based on your `.env` variables. Just plug 
 <p>
 
 ## How it works
-![](https://i.imgur.com/fdgzmKM.gif)
+![](https://i.imgur.com/Dw6TCkF.gif)
 
 ## Table of Contents
 - [gatsby-plugin-okta](#gatsby-plugin-okta)
