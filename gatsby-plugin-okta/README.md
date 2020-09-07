@@ -18,7 +18,9 @@ The plugin generates a config for you based on your `.env` variables. Just plug 
 ## How it works
 | [Custom Login Widget](example/custom-login-with-widget/) | [Okta Hosted Login](example/okta-hosted-login/) |
 | -------------------------------------------------------- | ----------------------------------------------- |
-| ![](https://i.imgur.com/Uvge6lS.gif)                     | ![](https://i.imgur.com/o7y3YCb.gif)            |
+| ![](https://i.imgur.com/Uvge6lS.gif)                     | ![](https://i.imgur.com/o7y3YCb.gif)            | ' |
+
+To view samples, click the headers above or go to project url: https://github.com/jasonnoahchoi/gatsby-plugin-okta
 
 ## Table of Contents
 - [gatsby-plugin-okta](#gatsby-plugin-okta)
@@ -49,7 +51,7 @@ The plugin generates a config for you based on your `.env` variables. Just plug 
 mkdir my-site
 cd my-site
 yarn init
-# install gatsby-plugin-okta and it's dependencies
+# install gatsby-plugin-okta and dependencies
 yarn add gatsby react react-dom gatsby-plugin-okta
 ```
 
