@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-okta",
   "private": false,
-  "version": "0.0.6å",
+  "version": "0.0.7",
   "main": "index.js",
   "license": "0BSD",
   "author": "Jason Noah Choi",
