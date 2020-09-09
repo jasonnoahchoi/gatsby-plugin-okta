@@ -54,7 +54,7 @@ export function ExternalLink({ href, children }) {
 
 export function NavLink({ to, children }) {
   return (
-    <Box as="h3" paddingTop="10px">
+    <Box as="h3" paddingTop="15px">
       <GatsbyLink to={to}>{children}</GatsbyLink>
     </Box>
   )

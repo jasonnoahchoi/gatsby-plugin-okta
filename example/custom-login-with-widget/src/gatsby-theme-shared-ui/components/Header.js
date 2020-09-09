@@ -1,7 +1,7 @@
 import React from 'react'
 import { useOktaAuth } from 'gatsby-plugin-okta'
-import { Button, Box, Text, useColorMode } from '@chakra-ui/core'
-import { NavLink } from 'gatsby-theme-shared-ui'
+import { Button, Box, Text } from '@chakra-ui/core'
+import { NavLink, DarkModeToggle } from 'gatsby-theme-shared-ui'
 import { navigate } from 'gatsby'
 import siteConfig from '../../../site-config'
 
@@ -14,7 +14,6 @@ const headerStyle = {
 
 export default function Header() {
   const { authState, authService } = useOktaAuth()
-  const { colorMode, toggleColorMode } = useColorMode()
 
   const login = async () => {
     navigate('/login')
@@ -26,18 +25,19 @@ export default function Header() {
   return (
     <header>
       <Box as="nav" style={headerStyle}>
-        <Text fontWeight="bold" paddingTop="10px">
-          {siteConfig.siteTitle}
-        </Text>
+        <NavLink to="/">
+          {' '}
+          <Text fontWeight="bold">{siteConfig.siteTitle}</Text>
+        </NavLink>
         <NavLink to="/home">Home</NavLink>
-        <NavLink to="/landing">Landing</NavLink>
         <NavLink to="/profile">Profile</NavLink>
-        <Button onClick={toggleColorMode}>
-          {colorMode === 'light' ? 'Dark' : 'Light'}
-        </Button>
-        <Button onClick={authState.isAuthenticated ? logout : login}>
+        <Button
+          marginTop={2}
+          onClick={authState.isAuthenticated ? logout : login}
+        >
           {authState.isAuthenticated ? 'Logout' : 'Login'}
         </Button>
+        <DarkModeToggle />
       </Box>
     </header>
   )
