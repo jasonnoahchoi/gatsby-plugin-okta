@@ -19,7 +19,7 @@ The plugin generates a config for you based on your `.env` variables. Just plug 
 ## How it works
 | [Custom Login Widget](example/custom-login-with-widget/) | [Okta Hosted Login](example/okta-hosted-login/) |
 | -------------------------------------------------------- | ----------------------------------------------- |
-| ![](https://i.imgur.com/Uvge6lS.gif)                     | ![](https://i.imgur.com/o7y3YCb.gif)            |
+| ![](https://i.imgur.com/OjSWVVi.gif)                     | ![](https://i.imgur.com/kucui1p.gif)            | ' |
 
 
 ## Table of Contents
