@@ -12,5 +12,6 @@ export { default as Form } from './src/components/Form'
 export { default as Header } from './src/components/Header'
 export { default as PrivateRoute } from './src/components/PrivateRoute'
 export { default as TextArea } from './src/components/TextArea'
+export { default as DarkModeToggle } from './src/components/DarkModeToggle'
 export { Link, ExternalLink, NavLink }
 export { Table, TableBody, TableCell, TableRow, TableHead, TableHeader }
